@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project4</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="main">
+		<div class="main-overlay"></div>
+		<div class="main-text">
+			<span>welcome))</span>
+			<h1>My landing page!</h1>
+			
+		</div>
+	</div>
+	<div class="tablet">
+		<div class="table-header">
+			<span>Plan Your Vacation</span>
+			<h2>Hot tours</h2>	
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, rerum.</p>
+		</div>
+	  <div class="car-tags">
+		 <div class="price-tag">
+		 	<img src="image/Audi RS 5_7themes-su.jpg" alt="" width="200px" height="200px">
+		 	<h4>Turkey</h4>
+		 	<p>Lorem ipsum dolor sit amet,  sit eos natus amet ipsum perferendis dolor reprehenderit. Consectetur necessitatibus eaque praesentium, eos eligendi minima.</p>
+		 </div>
+		 <div class="price-tag">
+		 	<img src="image/BMW M850i_7themes-su.jpg" alt="" width="200px" height="200px">
+		 	<h4>Eguipt</h4>
+		 	<p>Repellat beatae enim voluptates arch ipsam sapiente nemo sit recusandae autem magni odit atque dicta inventore vitae est error mollitia iste ratione.</p>
+
+		 </div>
+		 <div class="price-tag">
+		 	<img src="image/Ford Mustang Shelby GT500_7themes-su.jpg" alt="" width="200px" height="200px">
+		 	<h4>OAE</h4>
+		 	<p>Quos optio sapiente dignissimos cumque delo facilis voluptas esse est, praesentium aliquam quo voluptatem. Modi, libero nemo, mollitia debitis unde iure voluptate ea.</p>
+
+		 </div>
+		 <div class="price-tag">
+		 	<img src="image/Land Rover_7themes-su.jpg" alt="" width="200px" height="200px">
+		 	<h4>Tunis</h4>
+		 	<p>Pariatur veniam, facere officiis tenetur vitae laborum perferendis aliquam excepturi sapiente beatae, libero, ipsam vero itaque consequuntur a repellendus necessitatibus doloribus, sequi culpa enim id! Eveniet, maxime et molestias repudiandae!</p>
+
+		 </div>
+		 <div class="price-tag">
+		 	<img src="image/Lamborghini Urus_7themes-su.jpg" alt="" width="200px" height="200px">
+		 	<h4>Bolgary</h4>
+		 	<p>Perferendis corporis tempora aliquid voluptas natus quo, provident unde nulla accusantium quisquam velit blanditiis neque eos. Numquam illo vitae quibusdam provident reprehenderit laudantium?</p>
+
+		 </div>
+		 <div class="price-tag">
+		 	<img src="image/Audi e-Tron_7themes-su.jpg" alt="" width="200px" height="200px">
+		 	<h4>Thailand</h4>
+		 	<p>Eligendi modi, voluptatem voluptatum, quas architecto officiis molestiae consectetur vel illum dolore! A quod dolorem, numquam illo eius laboriosam vel.</p>
+		 </div>
+     	</div>
+   </div>
+ <div class="cont"> <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="image/Audi e-Tron.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="image/Audi RS 5.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="image/BMW M850i.jpg" style="width:100%">
+    <div class="text">Turkey(</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="image/Ford Mustang Shelby GT500.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <img src="image/Lamborghini Urus.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <img src="image/Land Rover.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}</script>
+</div>
+<div class="zebra">
+	<div class="zebra-header">
+		<h2>Some information about tours</h2>	
+		
+  	</div>
+  	<div class="zebra-text">
+  		<span id="dots"></span><div id="more">
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>tour</th>
+      <th>Cost</th>
+      <th>time</th>
+      <th>rate</th>
+    </tr>
+    <tr>
+      <td>Turkey</td>
+      <td>$990</td>
+      <td>10d</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Eguipt</td>
+      <td>$1200</td>
+      <td>7</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>OAE</td>
+      <td>$2500</td>
+      <td>14</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>bolgary</td>
+      <td>$700</td>
+      <td>10</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Tunis</td>
+      <td>$2300</td>
+      <td>21</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Thailand</td>
+      <td>$1000</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+  </table>
+</div></div>
+  		<button onclick="myFunction()" id="myBtn">Read more</button>
+  </div>
+	<script>
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+
+}
+</script>
+  	</div>
+
+<div class="google-app">
+	<div class="google-app-overlay"></div>
+	<div class="app">
+		<div class="app-map-form">
+			<div id="map"></div>
+			<script>
+				function initMap(){
+					var uluru = {lat: 49.836957, lng: 24.033618};
+					var map = new google.maps.Map(document.getElementById('map'), {zoom: 13, center: uluru});
+					var marker = new google.maps.Marker({position: uluru, map: map});
+				}
+			</script>
+			<script async defer
+             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXtA64VOlkv9YU90MpFAFOOUh9qjDtM3U&callback=initMap">
+            </script>
+		</div>
+		<div class="app-map-form">
+			<div id="app-form">
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfT8c1aXclCRmqTrstQc4aGZ1FgIR6w_OpFqm2ZxAc3ct7ymg/viewform?embedded=true" width="500" height="550" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="social">
+		<a href="https://www.facebook.com/yura.yatskiv.12" class="fa fa-facebook"></a>
+        <a href="https://github.com/Haytham1337" class="fa fa-github"></a>
+        <a href="https://www.instagram.com/yuriy_yts/" class="fa fa-instagram"></a>
+	</div>
+</footer>
+</body>
+</html>`	
