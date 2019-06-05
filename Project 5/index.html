@@ -1,0 +1,210 @@
+ab<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138868346-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138868346-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jQuery.com/jQuery-1.7.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body back >
+ 
+    <!--- JS Validation -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2>JS Validation</h2>
+                <p>ENTER btwn (1-5):</p>
+                <input id="numb">
+                <button type="button" onclick="Validation()">Submit</button>
+                <p id="demo"></p>
+            </div>
+        </div>
+    </div>
+    <!--- Drag and drop -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2>Drag and drop</h2>
+                <p>Drag the image back and forth between the two div elements.</p>
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="img/1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="225" height="125">
+                </div>
+                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>
+   
+    <!--- JQuery Slide Animate -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-6">
+                <h2>JQuery Slide</h2>
+                <div>
+                    <button id="flip" style="margin-bottom: 10px">Click to slide the image</button>
+                </div>
+                <img id="panel" src="img/1.jpg">
+            </div>
+            <div class="col-6">
+                <h2>JQuery Animate</h2>
+                <div>
+                    <button id="animate" style="margin-bottom: 10px">Animate</button>
+                </div>
+                <img id="animate1" src="img/3.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!--- AJAX -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1>AJAX</h1>
+                <div class="ajax_container">
+                    <h2 id="blue" class="ajax_item">test_url: https://httpbin.org/get</h2>
+                    <form class="ajax_item" name="ajax_form">
+                        Endpoint: <input id="data_url" type="text" name="data_url" value="https://httpbin.org/get">
+                    </form>
+                    <div class="ajax_item">
+                        <a class="waves-effect waves-light btn" onclick="get_ajax('text')"><button>Request_text</button></a>
+                        <a class="waves-effect waves-light btn" onclick="get_ajax('status')"><button>Request_status</button></a>
+                        <a class="waves-effect waves-light btn" onclick="get_ajax('headers')"><button>Request_headers</button></a>
+                    </div>
+                    <div class="ajax_item" id="aj_cont"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- JQuery Hide/Show FadeIn/Out -->
+    <
+    <!--- JQuery Stop Callback -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-6">
+                <h1>JQuery Stop</h1>
+                <div>
+                    <button id="stop" style="margin-bottom: 10px">Click to stop the animation</button>
+                    <button id="start" style="margin-bottom: 10px">Click to start the animation</button>
+                </div>
+                <img id="stop1" src="img/1.jpg">
+            </div>
+            <div class="col-6">
+                <h1>JQuery Callback</h1>
+                <div>
+                    <button id="callback" style="margin-bottom: 10px">Callback</button>
+                </div>
+                <img id="callback1" src="img/3.jpg">
+            </div>
+        </div>
+    </div>
+    <!--- JQuery Stop Callback -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1>JQuery Chaining</h1>
+                <div>
+                    <button id="chain" style="margin-bottom: 10px">Start chaining</button>
+                </div>
+                <img id="chain1" src="img/1.jpg">
+            </div>
+        </div>
+    </div>
+    <!--- jQuery + AJAX + JSON -->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1>jQuery + AJAX + JSON</h1>
+                <div class="json_content">
+                    <a id="get_ip"><button style="margin-bottom: 10px">Get IP</button></a>
+                    <div id="ip_div"></div>
+                    <a id="get_headers"><button style="margin-bottom: 10px">Get headers</button></a>
+                    <div id="headers_div"></div>
+                    <a id="get_date"><button style="margin-bottom: 10px">Get date</button></a>
+                    <div id="date_div"></div>
+                    <a id="get_echo"><button style="margin-bottom: 10px">Get echo</button></a>
+                    <div id="echo_div"></div>
+                    <a id="get_valid"><button style="margin-bottom: 10px">Get validation</button></a>
+                    <div id="valid_div"></div>
+                    <a id="get_js_code"><button style="margin-bottom: 10px">Get js_code</button></a>
+                    <div id="js_code_div"></div>
+                    <a id="get_md5"><button style="margin-bottom: 10px">Get md5</button></a>
+                    <div id="md5_div"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	 <!--- HTML Web Storage -->
+    <div class="container-fluid">
+        <div class="text-center">
+            <h1>HTML Web Storage</h1>
+            <form name="form1">
+                <input type="text" name="text1" placeholder="Enter text...">
+                <br>
+                <input type="text" name="text2" placeholder="Enter text...">
+                <br>
+                <input type="text" name="text3" placeholder="Enter text...">
+                <br>
+                <input type="button" value="Assign values" onClick="AssignValues()">
+                <br>
+                <input type="button" value="Show value 1" onClick="Value1()">
+                <br>
+                <input type="button" value="Show value 2" onClick="Value2()">
+                <br>
+                <input type="button" value="Show value 3" onClick="Value3()">
+                <br>
+                <input type="button" value="Remove value 1" onClick="Delete1()">
+                <br>
+                <input type="button" value="Remove value 2" onClick="Delete2()">
+                <br>
+                <input type="button" value="Remove value 3" onClick="Delete3()">
+                <br>
+                <input type="button" value="Clear storage" onClick="ClearStorage()">
+            </form>
+        </div>
+    </div>
+	div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-6">
+                <h1>JQuery Hide/Show</h1>
+                <div>
+                    <button id="hide" style="margin-bottom: 10px">Hide</button>
+                    <button id="show" style="margin-bottom: 10px">Show</button>
+                </div>
+                <img id="toggle" src="img/1.jpg">
+            </div>
+            <div class="col-6">
+                <h1>JQuery FadeIn/Out</h1>
+                <div>
+                    <button id="fadeIn" style="margin-bottom: 10px">FadeIn</button>
+                    <button id="fadeOut" style="margin-bottom: 10px">FadeOut</button>
+                </div>
+                <img id="toggle1" src="img/3.jpg">
+            </div>
+        </div>
+    </div>
+    <!--- Footer -->
+    <div class="container-fluid">
+        <
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9Db6lkBRaCVgWwgP5DsVIbcjthSUQl7s&callback=myMap"></script>
+</body>
+
+</html>
